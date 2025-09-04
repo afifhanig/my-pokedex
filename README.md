@@ -105,7 +105,7 @@ npx expo start
 
 ---
 
-## 👨‍💻 EAS Build Preview
+## 🚀  EAS Build Preview
 🔗 **Android Link:** [android](https://expo.dev/artifacts/eas/6t4toPMYmom5CWrioVvAPJ.aab)
 
 ---
