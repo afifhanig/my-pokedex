@@ -106,8 +106,8 @@ npx expo start
 ---
 
 ## 👨‍💻 Author
-Afif Hani
-📍 Indonesia
+Afif Hani G.
+📍 Indonesia.
 🔗 **GitHub Profile:** [afifhanig](https://github.com/afifhanig)
 
 
