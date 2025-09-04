@@ -113,8 +113,6 @@ npx expo start
 ## 👨‍💻 Author
 Afif Hani G.
 📍 Indonesia.
-A cross-platform Pokédex application built with **React Native + Expo**, running seamlessly on **Android, iOS, and Web**.  
-This project showcases API integration, offline-first data handling, state management with **Zustand**, and testing with **Jest**.
 🔗 **GitHub Profile:** [afifhanig](https://github.com/afifhanig)
 
 
