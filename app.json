@@ -27,7 +27,7 @@
       "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/favicon.png",
-      "name": "My Pokedex"   
+      "name": "My Pokedex"
     },
     "plugins": [
       "expo-router",
@@ -43,6 +43,16 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "dd9b965a-5ed5-480c-aac6-addda078697f"
+      }
+    },
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/dd9b965a-5ed5-480c-aac6-addda078697f"
     }
   }
 }
