@@ -76,6 +76,7 @@ my-pokedex/
 ├── app.json            # Expo app config
 ├── tsconfig.json       # TypeScript config
 └── package.json
+```
 
 ---
 
@@ -83,6 +84,7 @@ my-pokedex/
 - Run unit tests with:
 ```bash
 npm test
+```
 
 ---
 
