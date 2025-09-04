@@ -1,50 +1,61 @@
-# Welcome to your Expo app 👋
+# 📱 My Pokedex
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A cross-platform Pokédex application built with **React Native + Expo**, running seamlessly on **Android, iOS, and Web**.  
+This project showcases API integration, offline-first data handling, state management with **Zustand**, and testing with **Jest**.
 
-## Get started
+🔗 **GitHub Repository:** [afifhanig/my-pokedex](https://github.com/afifhanig/my-pokedex)
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 🚀 Overview
 
-2. Start the app
+The goal of this project is to demonstrate:
 
-   ```bash
-   npx expo start
-   ```
+- Building a **cross-platform Expo app** (Android, iOS, Web).  
+- **State management** with Zustand.  
+- **Offline-first capability** – favorites are available even without internet, and changes sync automatically when back online.  
+- **Testing** critical logic with Jest.  
+- Clean architecture and folder structure for maintainability.
 
-In the output, you'll find options to open the app in a xyz
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## ✨ Features
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 🔍 Core Features
+- **PokéAPI Integration**  
+  - Fetch and display Pokémon with pagination.  
+  - Detail screen with name, types, abilities, and image.  
 
-## Get a fresh project
+- **Favorites Management**  
+  - Add/remove Pokémon from a favorites list.  
+  - Favorites stored **offline** with sync when reconnected.  
 
-When you're ready, run:
+- **Offline-first**  
+  - Works fully offline for reading/updating favorites.  
+  - Sync queued changes once online.  
 
-```bash
-npm run reset-project
-```
+- **Navigation**  
+  - Powered by [Expo Router](https://expo.github.io/router) for smooth cross-platform navigation.  
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- **State Management**  
+  - Global state with [Zustand](https://zustand-demo.pmnd.rs/).  
 
-## Learn more
+- **API Handling**  
+  - [Axios](https://axios-http.com/) for network requests with error handling & retries.  
 
-To learn more about developing your project with Expo, look at the following resources:
+- **Testing**  
+  - Unit tests using [Jest](https://jestjs.io/) (see `__tests__` folder).  
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## 🛠️ Tech Stack
 
-Join our community of developers creating universal apps.
+- **Framework:** [Expo](https://expo.dev/) (Managed workflow)  
+- **Language:** TypeScript  
+- **Navigation:** Expo Router / React Navigation  
+- **State Management:** Zustand  
+- **API:** PokéAPI ([pokeapi.co](https://pokeapi.co/))  
+- **Persistence:** AsyncStorage / localStorage (offline support)  
+- **Testing:** Jest + React Native Testing Library  
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
