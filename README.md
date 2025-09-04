@@ -88,7 +88,7 @@ npm test
 
 ---
 
-📲 Running the App
+## 📲 Running the App
 - Clone the repo
 ```bash
 git clone https://github.com/afifhanig/my-pokedex.git
@@ -100,12 +100,14 @@ npm install
 ```
 - Start development server
 ```bash
-npm run start
+npx expo start
 ```
-  - Android: Press a or run npm run android
-  - iOS: Press i or run npm run ios
-  - Web: Run npm run web
 
 ---
+
+## 👨‍💻 Author
+Afif Hani
+📍 Indonesia
+🔗 **GitHub Profile:** [afifhanig](https://github.com/afifhanig)
 
 
