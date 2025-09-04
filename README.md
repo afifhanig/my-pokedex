@@ -88,4 +88,24 @@ npm test
 
 ---
 
+📲 Running the App
+- Clone the repo
+```bash
+git clone https://github.com/afifhanig/my-pokedex.git
+cd my-pokedex
+```
+- Install dependencies
+```bash
+npm install
+```
+- Start development server
+```bash
+npm run start
+```
+  - Android: Press a or run npm run android
+  - iOS: Press i or run npm run ios
+  - Web: Run npm run web
+
+---
+
 
