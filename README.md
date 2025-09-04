@@ -59,3 +59,31 @@ The goal of this project is to demonstrate:
 - **Testing:** Jest + React Native Testing Library  
 
 ---
+
+## 📂 Project Structure
+
+```plaintext
+my-pokedex/
+├── src/
+│   ├── api/            # API calls (PokéAPI integration)
+│   ├── components/     # Shared UI components
+│   ├── store/          # Zustand stores (favorites, connectivity, etc.)
+│   ├── screens/        # List & detail screens
+│   ├── hooks/          # Custom hooks
+│   └── utils/          # Helpers & constants
+├── __tests__/          # Jest test files
+├── app/                # Expo Router entry
+├── app.json            # Expo app config
+├── tsconfig.json       # TypeScript config
+└── package.json
+
+---
+
+## 🧪 Testing
+- Run unit tests with:
+```bash
+npm test
+
+---
+
+
