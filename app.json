@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "my-pokedex",
+    "name": "My Pokedex",
     "slug": "my-pokedex",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -9,19 +9,25 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.afifapp.mypokedex",
+      "infoPlist": {
+        "CFBundleDisplayName": "My Pokedex"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.afifapp.mypokedex"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.png",
+      "name": "My Pokedex"   
     },
     "plugins": [
       "expo-router",

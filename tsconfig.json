@@ -1,7 +1,16 @@
 {
-  "extends": "expo/tsconfig.base",
+  "extends": "expo/tsconfig.base.json",
   "compilerOptions": {
+    "jsx": "react-jsx",
     "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "moduleResolution": "bundler",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./*"
@@ -9,8 +18,7 @@
     }
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
+    "./**/*",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
   ]

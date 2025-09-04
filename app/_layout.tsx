@@ -1,29 +1,36 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
-
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { useConnectivityStore } from "@/src/store/connectivity.store";
+import NetInfo from "@react-native-community/netinfo";
+import { Stack } from "expo-router";
+import { useEffect } from "react";
+import { Platform } from "react-native";
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
+  const setOnline = useConnectivityStore((s) => s.setOnline);
 
-  if (!loaded) {
-    // Async font loading only occurs in development.
-    return null;
-  }
+  useEffect(() => {
+    const unsub = NetInfo.addEventListener((state) => {
+      setOnline(!!state.isConnected && !!state.isInternetReachable);
+    });
+
+    if (Platform.OS === "web") {
+      const update = () => setOnline(navigator.onLine);
+      window.addEventListener("online", update);
+      window.addEventListener("offline", update);
+      update();
+      return () => {
+        window.removeEventListener("online", update);
+        window.removeEventListener("offline", update);
+        unsub();
+      };
+    }
+    return () => unsub();
+  }, [setOnline]);
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <Stack screenOptions={{ headerTitleAlign: "center" }}>
+      <Stack.Screen name="index" options={{ title: "Pokédex" }} />
+      <Stack.Screen name="pokemon/[name]" options={{ title: "Detail" }} />
+      <Stack.Screen name="favorites" options={{ title: "Favorites" }} />
+    </Stack>
   );
 }
